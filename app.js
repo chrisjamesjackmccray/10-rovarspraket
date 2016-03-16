@@ -6,7 +6,14 @@
  */
 
 export function max(a, b){
-    // YOUR CODE HERE
+  if (a > b) {
+    return a;
+  }
+
+  else if (b > a) {
+    return b;
+  }
+
 }
 
 /**
@@ -17,8 +24,24 @@ export function max(a, b){
  */
 
 export function maxOfThree(a, b, c){
-    // YOUR CODE HERE
+
+    if ((a >= b) && (a >= c)) {
+      return a;
+    }
+
+    else if ((b >= a) && (b >= c)) {
+      return b;
+    }
+      else {
+        return c;
+      }
 }
+
+
+
+
+
+
 
 /**
  * PART 2
@@ -28,7 +51,17 @@ export function maxOfThree(a, b, c){
  */
 
 export function isVowel(char){
-    // YOUR CODE HERE
+
+  var v = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
+
+  if (v.indexOf(char) > -1) {
+    return true;
+  }
+
+  else {
+    return false;
+  }
+
 }
 
 /**
@@ -44,7 +77,8 @@ export function isVowel(char){
  */
 
 export function rovarspraket(input) {
-    // YOUR CODE HERE
+
+
 }
 
 /**
@@ -57,7 +91,12 @@ export function rovarspraket(input) {
  */
 
 export function reverse(str){
-    // YOUR CODE HERE
+
+var list = ["games"];
+   list.reverse(); {
+   console.log(list);
+  }
+
 }
 
 /**
@@ -70,8 +109,19 @@ export function reverse(str){
  */
 
 export function findLongestWord(sentence){
-    // YOUR CODE HERE
+
+
+  var splitSentence = sentence.split(' ')
+  for (var i = 0; i <  collection.length; i++ ) {
+
+  }
+
+
 }
+
+
+
+
 
 /**
  * Part 6
@@ -82,5 +132,13 @@ export function findLongestWord(sentence){
  */
 
  export function isPalindrome(word) {
-   // YOUR CODE HERE
+   var a = ["palindrome"];
+
+   if (a.indexOf(word) > -1) {
+     return true;
+   }
+
+   else {
+     return false;
+   }
  }
