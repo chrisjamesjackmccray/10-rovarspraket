@@ -77,9 +77,25 @@ export function isVowel(char){
  */
 
 export function rovarspraket(input) {
+  var output = "";
 
+  for (var i = 0; i < input.length; i++) {
+    var letter = input[i];
+
+    if (isVowel(letter) || letter === " ") {
+      output += letter;
+    }
+    else {
+      output += letter + "o" + letter;
+    }
+  }
+    return output;
 
 }
+
+
+
+
 
 /**
  * Part 4
@@ -92,12 +108,31 @@ export function rovarspraket(input) {
 
 export function reverse(str){
 
-var list = ["games"];
-   list.reverse(); {
-   console.log(list);
-  }
+  var splitString = str.split('');
+  var word = splitString.reverse();
+   return word.join('');
+
 
 }
+
+//  function reverse(str){
+
+//   var splitString = str.split("");
+
+//    console.log(splitString);
+
+//   var word = splitString.reverse();
+
+//       console.log(word);
+
+//   var reversedStr = word.join("")
+//     console.log(reversedStr);
+
+//    return reversedStr;
+
+
+// }
+
 
 /**
  * Part 5
@@ -109,16 +144,20 @@ var list = ["games"];
  */
 
 export function findLongestWord(sentence){
+  var splitSentence = sentence.split(' ');
+  var longestWord = "";
 
-
-  var splitSentence = sentence.split(' ')
-  for (var i = 0; i <  collection.length; i++ ) {
-
+  for (var i = 0; i < splitSentence.length; i++ ) {
+    if (splitSentence[i].length > longestWord.length) {
+      longestWord = splitSentence[i];
+    }
   }
+    {
+      return longestWord;
+    }
 
 
 }
-
 
 
 
@@ -132,13 +171,10 @@ export function findLongestWord(sentence){
  */
 
  export function isPalindrome(word) {
-   var a = ["palindrome"];
-
-   if (a.indexOf(word) > -1) {
-     return true;
-   }
-
-   else {
-     return false;
-   }
- }
+  if (word === reverse(word)) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
